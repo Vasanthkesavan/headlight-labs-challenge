@@ -1,0 +1,25 @@
+.para-beauty {
+    font-size: 20px;
+    margin-right: 200px;
+    padding-top: 60px;
+    font-style: italic;
+    text-align: justify;
+}
+
+@media(max-width: 920px) {
+    .para-beauty {
+        font-size: 18px;
+        margin-right: 100px;
+        margin-left: 100px;
+        text-align: justify; 
+    }
+}
+
+@media(max-width: 600px) {
+    .para-beauty {
+        font-size: 16px;
+        margin-right: 60px;
+        margin-left: 60px;
+        text-align: justify;
+    }
+}

@@ -1,0 +1,33 @@
+<router-outlet *ngIf="nav"></router-outlet>
+<div class="container" *ngIf="!nav">
+  <div class="userForm">
+    <app-usersubmit 
+      (beforeClick)="beforeClick($event)"
+      (afterClick)="afterClick($event)">
+    </app-usersubmit>
+  </div>
+
+  <div class="header">
+    <h1>WAYNE INTELLIGENCE SERVICES</h1>
+    <hr>
+    <p>Affiliated with The Wayne Corporation</p>
+    <a 
+      class="link" 
+      routerLink="/hunters"
+      (click)="onNav()">
+      More Info
+    </a>
+    
+  </div>
+
+  <div class="matchScore">
+    <app-mission 
+      *ngIf="!beforeSearch">
+    </app-mission>
+    <app-match-score 
+      *ngIf="beforeSearch"
+      [suspectLookup]="suspectLookup">
+    </app-match-score>
+  </div>
+</div>
+

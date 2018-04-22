@@ -1,0 +1,67 @@
+form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.submit-btn {
+    height: 35px;
+    width: 60px;
+    margin-left: 20px;
+}
+
+label {
+    padding: 10px;
+    display: table;
+}
+
+.name-input {
+    width: 75%;
+    height: 30px;
+    margin-left: 10px;
+}
+
+.file-input {
+    display: inline-block;
+    text-align: left;
+    background: #fff;
+    padding: 16px;
+    width: 300px;
+    position: relative;
+    border-radius: 3px;
+  }
+  
+  .file-input > [type='file'] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 10;
+    cursor: pointer;
+  }
+  
+  .file-input > .button {
+    display: inline-block;
+    cursor: pointer;
+    background: #eee;
+    padding: 8px 16px;
+    border-radius: 2px;
+    margin-right: 8px;
+    margin-left: 10px;
+  }
+  
+  .file-input:hover > .button {
+    background: dodgerblue;
+    color: white;
+  }
+  
+  .file-input > .label {
+    color: #333;
+    white-space: nowrap;
+    opacity: .3;
+  }
+  
+  .file-input.-chosen > .label {
+    opacity: 1;
+  }

@@ -1,0 +1,30 @@
+<div style="display: block">
+        <canvas baseChart
+                #baseChart="base-chart"
+                [data]="pieChartData"
+                [labels]="pieChartLabels"
+                [chartType]="pieChartType"
+                (chartHover)="chartHovered($event)"
+                (chartClick)="chartClicked($event)"
+                [colors]="pieChartColors">
+        </canvas>
+</div>
+<div class="score-display">
+        Your Similarity Score: {{pieChartData[0]}}
+</div>
+<div class="score-display">
+        <button 
+                mat-raised-button 
+                color="warn"
+                (click)="onReport()">
+                Report       
+        </button>
+        <p 
+                *ngIf="reported" 
+                style="
+                        font-size: 14px; 
+                        color: red;
+                        padding-top: 14px;">
+                {{reportMessage}}
+        </p>
+</div>
